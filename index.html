@@ -1,0 +1,1069 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>firstclassacademy.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="#">
+
+        <link
+        rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      />
+
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>    
+</head>
+<style>
+    *{
+        font-family: sans-serif;
+        margin: 0; padding:0 ;
+        box-sizing: border-box;
+        outline: none;border: none;
+        text-decoration: none;
+        transition: .2s linear;
+        text-transform: capitalize;
+    }
+    :root{
+        --green:#00E77F;
+        --white:#fff;
+        --light-white:#aaa;
+        --black:#3d3d3d;
+        --light-bg:#4b4b4b;
+
+    }
+
+    *::selection{
+        background-color: var(--white);
+        color: var(--black);
+    }
+    html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 8rem;
+    }
+    ::-webkit-scrollbar{
+        height: .5rem;
+        width: 1rem;
+
+    }
+
+    ::-webkit-scrollbar-track{
+        background-color: thistle;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: gold;
+        border-radius: 5rem;
+    }
+    body{
+        background-color: var(--black);
+    }
+    section{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background-color: var(--light-bg);
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+}
+
+.btn:hover{
+    background-color: blue;
+    color: var(--white);
+}
+.heading{
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 4rem;
+    color: maroon;
+    text-transform: uppercase;
+}
+.heading span{
+    color: gold;
+    text-transform: uppercase;
+}
+    
+    #menu-btn {
+        cursor: pointer;
+        color: gold;
+        font-size: 2.5rem;
+        display: none;
+        display: inline-block;
+    }
+
+
+
+
+.home{
+    margin-top: 10rem;
+
+}
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+}
+.home .row .content{
+    flex: 1 1 40rem;
+    text-align: center;
+}
+
+.home .row .content h3{
+    font-size: 6rem;
+    animation: animate 3s linear infinite;
+}
+.home .row .image{
+  flex: 1 1 40rem;
+  
+  
+}
+.home .row .image img{
+    width: 100%;
+}
+
+.home .row .content h3{
+    margin-bottom: 1rem;
+    font-size: 7rem;
+    color: maroon;
+    line-height: 1;
+  
+}
+
+.home .row .content h3 span{
+    color: gold;
+    
+}
+
+.count .box-container{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+gap: 1.5rem;
+align-items: flex-start;
+}
+.count .box-container .box{
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.count .box-container .box .content h3{
+    font-size: 2rem;
+    color: maroon;
+    margin-bottom: .5rem;
+
+}
+
+.count .box-container .box .content p{
+    font-size: 1.6rem;
+    color: var(--light-white);
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex: 1 1 40rem;
+}
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    text-align: center;
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: var(--white);
+   
+}
+
+.about .row .content p{
+    padding: 1rem 0;
+    line-height: 2;
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+.subjects .slide{
+   
+    background-color: var(--light-bg);
+    border-radius: -5rem;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    user-select: none;
+}
+.subjects .slide img{
+    height: 25rem;
+    width: 100%;
+}
+.subjects .slide h3{
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    color: gold;
+   
+}
+.subjects .slide p{
+    line-height: 2;
+    font-size: 1.6rem;
+    color: var(--light-white);
+}
+
+.swiper-pagination-bullet{
+    background-color: var(--white);
+}
+
+.swiper-pagination-bullet-active{
+    background-color: maroon;
+}
+
+
+.teachers .slide{
+    position: relative;
+   margin-bottom: 4rem;
+    overflow: hidden;
+    user-select: none;
+
+}
+.teachers .slide img{
+    height: 45rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+.teachers .slide h3{
+    margin: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: gold;
+    
+}
+.teachers .slide .share{
+    position: absolute;
+    top: 4rem; left: -10rem;
+
+}
+.teachers .slide:hover .share{
+    left: 2rem;
+}
+
+.teachers .slide .share a{
+    display: block;
+    margin-top: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background-color: var(--black);
+    color: var(--black);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.teachers .slide .share a:hover{
+    background-color: var(--light-white);
+    color: gold;
+}
+
+.reviews-slider .slide{
+    
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+    padding: 2rem;
+    margin-bottom: 4rem;
+    user-select: none;
+    height: 35rem;
+    top: 4rem;
+    
+}
+
+.reviews-slider .slide p{
+    line-height: 2;
+    font-size: 1.6rem;
+    color: var(--light-white);
+}
+.reviews-slider .slide .user{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.reviews-slider .slide .user img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviews-slider .slide .user h3{
+    font-size: 2rem;
+    color: maroon;
+    margin-bottom: .7rem;
+   
+}
+.reviews-slider .slide .user i
+ {
+    font-size: 1.5rem;
+    color: gold;
+    margin-bottom: .5rem;
+}
+
+.contact .row{
+    display:flex ;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row .image{
+    flex: 1 1 40rem;
+}
+.contact .row .image img{
+    width: 100%;
+}
+.contact .row form{
+    flex: 1 1 40rem;
+}
+
+.contact .row form .box{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+    font-size: 1.8rem;
+    color: var(--white);
+    padding: 1.4rem;
+    text-transform: none;
+}
+.contact .row form span{
+    font-size: 1.6rem;
+    color: var(--light-white);
+}
+
+.contact .row form .radio{
+    margin-top: 2rem;
+   margin-bottom: 1rem; 
+}
+
+.contact .row form .radio label{
+    font-size: 1.6rem;
+    color: var(--light-white);
+    margin-left: .5rem;
+    cursor: pointer;
+}
+.contact .row form .radio #female{
+margin-left: 5rem;
+}
+
+.contact .row form .radio input:checked{
+background-color: gold;
+border-radius: 2rem;
+}
+.contact .row form .radio #male:checked ~ label[for="male"]{
+    color:maroon ;
+}
+
+.contact .row form .radio #female:checked ~ label[for="female"]{
+    color:maroon ;
+}
+
+.footer{
+  background-color: var(--light-bg); 
+  text-align: center; 
+}
+.footer .share a{
+margin: 0 .3rem;
+height: 4.5rem;
+width: 4.5rem;
+line-height: 4.5rem;
+border-radius: 50%;
+font-size: 3rem;
+color: #fff;
+background-color: var(--black);
+}
+.footer .share a:hover{
+    background-color: blue;
+}
+.footer .credit{
+    margin-top: 2.5rem;
+    padding: 2rem;
+    padding-top: 2.5rem;
+    border-top: .1rem solid gold;
+    font-size: 1.5rem;
+    color: var(--light-white);
+}
+
+.footer .credit span{
+    color: gold;
+}
+
+
+
+ 
+        
+   
+    @media (max-width:991px){
+        html{
+        font-size: 55%;
+        
+    }
+    .home .row .content h3{
+        font-size: 8rem;
+    }
+    }
+    @media (max-width:768px){
+        #menu-btn{
+        
+        display: inline-block;
+    }
+    #-btn.fa-times{
+        transform: ROTATE(180DEG);
+    }
+.header .flex.navbar{
+     position: absolute;
+     top: 99%;left: 0;right: 0;
+     border-top: .1rem solid var(--light-white);
+     border-bottom: .1rem solid var(--light-white);
+     background-color: var(--light-bg);
+     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .flex .navbar a{
+        display: inline-block;
+        margin: 1rem;
+    }
+    .home .row .content h3{
+        font-size: 6rem;
+    }
+    }
+    @media (max-width:450px){
+        html{
+        font-size: 50%;
+        
+    }
+    .home .row .content h3{
+    font-size: 5   rem;
+}
+.heading{
+    font-size:3rem ;
+}
+    }
+
+    .toggle{
+    font-size: 30px;
+    display: none;
+
+}
+
+@media screen and (max-width: 600px){
+    nav{display: block;
+    position: relative;
+    padding: 15px 20px;
+    }
+}
+</style>
+
+<body>
+   
+
+        </section>
+    </header>
+
+    <section class="home" id="home">
+        <div class="row">
+            <div class="content">
+                <h3>FIRST CLASS<span>Academy</span></h3>
+                <a href="#contact" class="btn">CONTACT US</a>
+            </div>
+            <div class="image">
+                <img src="cartoon-removebg-preview.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="count">
+        <div class="box-container">
+            <div class="box">
+                <svg xmlns="http://www.w3.org/2000/svg" height="5rem"  
+                viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></svg>
+                <div class="content">
+                    <h3>20+</h3>
+                    <p>Subjects</p>
+                </div>
+            </div>
+
+            
+                <div class="box">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="5rem" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#e1da14}</style><path d="M219.3 .5c3.1-.6 6.3-.6 9.4 0l200 40C439.9 42.7 448 52.6 448 64s-8.1 21.3-19.3 23.5L352 102.9V160c0 70.7-57.3 128-128 128s-128-57.3-128-128V102.9L48 93.3v65.1l15.7 78.4c.9 4.7-.3 9.6-3.3 13.3s-7.6 5.9-12.4 5.9H16c-4.8 0-9.3-2.1-12.4-5.9s-4.3-8.6-3.3-13.3L16 158.4V86.6C6.5 83.3 0 74.3 0 64C0 52.6 8.1 42.7 19.3 40.5l200-40zM111.9 327.7c10.5-3.4 21.8 .4 29.4 8.5l71 75.5c6.3 6.7 17 6.7 23.3 0l71-75.5c7.6-8.1 18.9-11.9 29.4-8.5C401 348.6 448 409.4 448 481.3c0 17-13.8 30.7-30.7 30.7H30.7C13.8 512 0 498.2 0 481.3c0-71.9 47-132.7 111.9-153.6z"/></svg>
+                    <div class="content">
+                        <h3>3.5k</h3>
+                        <p>Students</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="5rem" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M160 64c0-35.3 28.7-64 64-64H576c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H336.8c-11.8-25.5-29.9-47.5-52.4-64H384V320c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v32h64V64L224 64v49.1C205.2 102.2 183.3 96 160 96V64zm0 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM133.3 352h53.3C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7H26.7C11.9 512 0 500.1 0 485.3C0 411.7 59.7 352 133.3 352z"/></svg>
+                    <div class="content">
+                        <h3>30+</h3>
+                        <p>Teachers</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="5rem" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#eef207}</style><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM164.1 325.5C182 346.2 212.6 368 256 368s74-21.8 91.9-42.5c5.8-6.7 15.9-7.4 22.6-1.6s7.4 15.9 1.6 22.6C349.8 372.1 311.1 400 256 400s-93.8-27.9-116.1-53.5c-5.8-6.7-5.1-16.8 1.6-22.6s16.8-5.1 22.6 1.6zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+                    <div class="content">
+                        <h3>99.9%</h3>
+                        <p>Satisfaction</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="image">
+           <img src="choose_us-removebg-preview.png" alt="">
+            </div>    
+                <div class="content">
+                    <h3>why choose us?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione harum commodi blanditiis impedit rerum nulla, modi id provident, tempora fugit alias, reprehenderit minima vel magni.
+                         Debitis accusantium aliquid omnis rerum!</p>
+                       <a href="#contact" class="btn">contact us</a>  
+                </div>
+            
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="subjects" id="subjects">
+        <h1 class="heading">our <span>subjects</span></h1>
+        
+        <div class=" swiper subject-slider">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide slide">
+                    <img src="bs.books-removebg-preview.png" alt="">
+                    <h3>Busiess Studies</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laudantium alias sint ratione, at voluptatem error nam veniam accusamus, soluta provident consectetur ipsa natus asperiores consequatur similique in 
+                        tenetur nesciunt.</p>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="ec.books-removebg-preview.png" alt="">
+                    <h3>Economics</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laudantium alias sint ratione, at voluptatem error nam veniam accusamus, soluta provident consectetur ipsa natus asperiores consequatur similique in 
+                        tenetur nesciunt.</p>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="geo.books-removebg-preview.png" alt="">
+                    <h3>Geography</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laudantium alias sint ratione, at voluptatem error nam veniam accusamus, soluta provident consectetur ipsa natus asperiores consequatur similique in 
+                        tenetur nesciunt.</p>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="acc-removebg-preview.png" alt="">
+                    <h3>Accounts</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laudantium alias sint ratione, at voluptatem error nam veniam accusamus, soluta provident consectetur ipsa natus asperiores consequatur similique in 
+                        tenetur nesciunt.</p>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="accounts.books-removebg-preview.png" alt="">
+                    <h3>Maths</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laudantium alias sint ratione, at voluptatem error nam veniam accusamus, soluta provident consectetur ipsa natus asperiores consequatur similique in 
+                        tenetur nesciunt.</p>
+                </div>
+                <div class="swiper-slide slide">
+                    <img src="books-removebg-preview.png" alt="">
+                    <h3>History</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laudantium alias sint ratione, at voluptatem error nam veniam accusamus, soluta provident consectetur ipsa natus asperiores consequatur similique in 
+                        tenetur nesciunt.</p>
+                </div>
+                <div class="swiper-slide slide">
+                    <img src="divinity.books-removebg-preview.png" alt="">
+                    <h3>Divinity</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laudantium alias sint ratione, at voluptatem error nam veniam accusamus, soluta provident consectetur ipsa natus asperiores consequatur similique in 
+                        tenetur nesciunt.</p>
+                </div>
+                <div class="swiper-slide slide">
+                    <img src="computers.books-removebg-preview.png" alt="">
+                    <h3>Computers</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laudantium alias sint ratione, at voluptatem error nam veniam accusamus, soluta provident consectetur ipsa natus asperiores consequatur similique in 
+                        tenetur nesciunt.</p>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+<section class="teachers" id="teachers">
+       <h1 class="heading">expert <span>Teachers</span></h1>
+    <div class="swiper teachers-slider">
+       <div class="swiper-wrapper">
+
+        <div class="swiper-slide slide">
+            <img src="mutsongodza placeholder.jpg" alt="">
+            <div class="share">
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:gold}</style><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></a>
+            
+            </div>
+            <h3>Mr Mutsongodza</h3>
+
+        </div>
+
+
+        <div class="swiper-slide slide">
+            <img src="Matungwana.jpg" alt="">
+            <div class="share">
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:gold}</style><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></a>
+            
+               
+            </div>
+            <h3>Mr Matungwana</h3>
+
+        </div>
+
+        <div class="swiper-slide slide">
+            <img src="Gwashu.jpg" alt="">
+            <div class="share">
+                
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:gold}</style><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></a>
+               
+            
+            </div>
+            <h3>Mr Gwashu</h3>
+
+        </div>
+
+        <div class="swiper-slide slide">
+            <img src="jarawazi.png" alt="">
+            <div class="share">
+              
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:gold}</style><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></a>
+                
+           
+            </div>
+            <h3>Mr Jarawazi</h3>
+
+        </div>
+
+        <div class="swiper-slide slide">
+            <img src="chiwara.jfif" alt="">
+            <div class="share">
+              
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:gold}</style><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></a>
+                
+            
+            </div>
+            <h3>Mr Chiwara</h3>
+
+        </div>
+
+        <div class="swiper-slide slide">
+            <img src="Mutasa.jfif" alt="">
+            <div class="share">
+                
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:gold}</style><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></a>
+                
+            </div>
+            <h3>Mr Mutasa</h3>
+
+        </div>
+
+       </div>
+     </div> 
+       <div class="swiper-pagination"></div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="reviews" id="reviews">
+
+    <h1 class="heading">student's<span>reviews</span></h1>
+    <div class="swiper reviews-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus blanditiis numquam eaque, doloremque quod earum voluptas quaerat adipisci illo sed. Illum illo odio neque aliquam maiores accusamus 
+                    excepturi in. Dolore!</p>
+                    <div class="user">
+                        <img src="review image1.jpg" alt="">
+                        <div class="user-info">
+                            <h3>Patience K Mapichi</h3>
+                            <div class="stars">
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                 <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+
+            <div class="swiper-slide slide">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus blanditiis numquam eaque, doloremque quod earum voluptas quaerat adipisci illo sed. Illum illo odio neque aliquam maiores accusamus 
+                    excepturi in. Dolore!</p>
+                    <div class="user">
+                        <img src="placeholder.jpg" alt="">
+                        <div class="user-info">
+                            <h3>Tanaka Muchazoreka</h3>
+                            <div class="stars">
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                 <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+
+            <div class="swiper-slide slide">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus blanditiis numquam eaque, doloremque quod earum voluptas quaerat adipisci illo sed. Illum illo odio neque aliquam maiores accusamus 
+                    excepturi in. Dolore!</p>
+                    <div class="user">
+                        <img src="placeholder1.jpg" alt="">
+                        <div class="user-info">
+                            <h3>Kudzai Mabhehla</h3>
+                            <div class="stars">
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                 <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+
+            <div class="swiper-slide slide">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus blanditiis numquam eaque, doloremque quod earum voluptas quaerat adipisci illo sed. Illum illo odio neque aliquam maiores accusamus 
+                    excepturi in. Dolore!</p>
+                    <div class="user">
+                        <img src="placeholder2.jpg" alt="">
+                        <div class="user-info">
+                            <h3>Shelton Kapesi</h3>
+                            <div class="stars">
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                 <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+
+            <div class="swiper-slide slide">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus blanditiis numquam eaque, doloremque quod earum voluptas quaerat adipisci illo sed. Illum illo odio neque aliquam maiores accusamus 
+                    excepturi in. Dolore!</p>
+                    <div class="user">
+                        <img src="placeholder3.jpg" alt="">
+                        <div class="user-info">
+                            <h3>Lawson P Makoni</h3>
+                            <div class="stars">
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+
+            <div class="swiper-slide  slide">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus blanditiis numquam eaque, doloremque quod earum voluptas quaerat adipisci illo sed. Illum illo odio neque aliquam maiores accusamus 
+                    excepturi in. Dolore!</p>
+                    <div class="user">
+                        <img src="review image1.jpg" alt="">
+                        <div class="user-info">
+                            <h3>Kelvin Marimanzi</h3>
+                            <div class="stars">
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                 <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+
+
+            <div class="swiper-slide slide">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus blanditiis numquam eaque, doloremque quod earum voluptas quaerat adipisci illo sed. Illum illo odio neque aliquam maiores accusamus 
+                    excepturi in. Dolore!</p>
+                    <div class="user">
+                        <img src="para-removebg-preview.png" alt="">
+                        <div class="user-info">
+                            <h3>Tapiwa Kuveya</h3>
+                            <div class="stars">
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                 <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                                <i><ion-icon name="star-half-outline"></ion-icon></i>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <div class="swiper-panination"></div>
+    </div>
+</section>
+
+
+
+
+
+<section class="contact" id="contact">
+    <h1 class="heading"><span>contact</span> us</h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="contact1-removebg-preview.png" alt="">
+
+        </div>
+
+        <form action="" method="post">
+            <span>your name</span>
+            <input type="text" required placeholder="enter your full name" maxlength="50"
+            name="name" class="box">
+            <span>your email</span>
+            <input type="email" required placeholder="enter your valid email adress" maxlength="50"
+            name="email" class="box">
+            <span>your number</span>
+            <input type="number" required placeholder="enter your phone number" max="5000" min="0"
+            name="number" class="box"  onkeypress="if(this.value.length == 10) return false;">
+            <span>select subjects</span>
+            <select name="class" class="box" required>
+                <option value="" disabled selected>select the subjects</option>
+                <option value="Busiess Studies">Business Studies</option>
+                <option value="Economics">Economics</option>
+                <option value="Accounts">Accounts</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Geography">Geography</option>
+                <option value="History">History</option>
+                <option value="Divinity">Divinity</option>
+                <option value="Literature">Literature</option>
+            </select>
+                <span>select gender</span>
+                <div class="radio">
+                    <input type="radio" name="gender"  value="male" id="male">
+                    <label for="male">male</label>
+                    <div class="radio">
+                        <input type="radio" name="gender"  value="female" id="female">
+                        <label for="female">female</label>
+                </div>
+                <input type="submit" value="send message" class="btn" name="send">
+        </form>
+    </div>
+</section>
+
+
+
+<footer class="footer">
+    <section>
+        <div class="share">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="mail-outline"></ion-icon></a>
+            <a href="#"><ion-icon name="phone-portrait-outline"></ion-icon></a>
+        </div>
+        <div class="credit">
+         &copy;  Copyright @2023 designed by <span> Kuveya Tapiwa</span> / all rights reserved!
+        </div>
+    </section>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</body>
+
+<script>
+    var swiper = new Swiper(".subject-slider", {
+        spaceBetween: 10,
+        grabCursor:true,
+        loop:true,
+       pagination: {
+        el: ".swiper-pagination",
+        clickable:true,
+      },
+    breakpoints: {
+        '540': {
+          slidesPerView: 1,
+          
+        },
+        "768": {
+          slidesPerView: 2,
+          
+        },
+        "1024": {
+          slidesPerView: 3,
+          
+        },
+
+     },
+    });
+
+
+
+
+    var swiper = new Swiper(".teachers-slider", {
+        spaceBetween: 10,
+        grabCursor:true,
+        loop:true,
+       pagination: {
+        el: ".swiper-pagination",
+        clickable:true,
+      },
+    breakpoints: {
+        '540': {
+          slidesPerView: 1,
+          
+        },
+        "768": {
+          slidesPerView: 2,
+          
+        },
+        "1024": {
+          slidesPerView: 3,
+          
+        },
+
+     },
+    });
+
+
+
+
+    var swiper = new Swiper(".reviews-slider", {
+        spaceBetween: 10,
+        grabCursor:true,
+        loop:true,
+       pagination: {
+        el: ".swiper-pagination",
+        clickable:true,
+      },
+    breakpoints: {
+        '540': {
+          slidesPerView: 1,
+          
+        },
+        "768": {
+          slidesPerView: 2,
+          
+        },
+        "1024": {
+          slidesPerView: 3,
+          
+        },
+
+     },
+    });
+
+
+
+
+
+   
+</script>
